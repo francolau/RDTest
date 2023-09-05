@@ -17,7 +17,9 @@ Antes de ejecutar el proyecto, asegúrate de configurar adecuadamente tu entorno
 
 2. Crea un entorno virtual: `python -m venv venv`
 
-3. Activa el entorno virtual: `source venv/bin/activate` __En Linux/macOS__ - venv\Scripts\activate __En Windows (cmd)__
+3. Activa el entorno virtual: 
+    - `source venv/bin/activate` __En Linux/macOS__ 
+    - venv\Scripts\activate __En Windows (cmd)__
 
 ## Ejecución
 
@@ -30,5 +32,5 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 ## Uso de la API
 
-- POST /input/{my_target_field}: Crea una entidad con un campo de destino especificado y lo convierte a mayúsculas.
- - GET /get_data/{id}: Obtiene una entidad por su ID.
+- __POST__ /input/{my_target_field}: Crea una entidad con un campo de destino especificado y lo convierte a mayúsculas.
+ - __GET__ /get_data/{id}: Obtiene una entidad por su ID.
