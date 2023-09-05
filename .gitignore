@@ -3,3 +3,4 @@ __pycache__/
 fastapi-env/
 uvicorn.log
 uvicorn/__pycache__/
+test.db
