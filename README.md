@@ -19,7 +19,7 @@ Antes de ejecutar el proyecto, asegúrate de configurar adecuadamente tu entorno
 
 3. Activa el entorno virtual: 
     - `source venv/bin/activate` __En Linux/macOS__ 
-    - venv\Scripts\activate __En Windows (cmd)__
+    - `venv\Scripts\activate` __En Windows (cmd)__
 
 4. Instala las dependencias: `pip install -r requirements.txt`
 
