@@ -35,4 +35,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ## Uso de la API
 
 - __POST__ /input/{my_target_field}: Crea una entidad con un campo de destino especificado y lo convierte a mayúsculas.
- - __GET__ /get_data/{id}: Obtiene una entidad por su ID.
+- __GET__ /get_data/{id}: Obtiene una entidad por su ID.
+
+## Credenciales
+
+- Usuario: test
+- Contraseña: test
