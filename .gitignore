@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+fastapi-env/
+uvicorn.log
+uvicorn/__pycache__/
