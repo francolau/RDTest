@@ -1,9 +1,9 @@
+from fastapi import FastAPI, status, HTTPException, Depends
+from typing import Annotated
+from config.auth import authenticate_user
 from config.database import database
 from config.database import Engine
-from typing import Annotated
 from models.entity import entity, EntityIn, metadata
-from fastapi import FastAPI, status, HTTPException, Depends
-from config.auth import authenticate_user
 
 metadata.create_all(Engine)
 
@@ -78,4 +78,5 @@ async def create_entitie(my_target_field: str, entitie: EntityIn, credentials: A
         
     query = entity.insert().values(field_1=entitie.field_1, author=entitie.author, description=entitie.description, my_numeric_field=entitie.my_numeric_field)
     last_record_id = await database.execute(query)
-    return {"id": last_record_id}
+    result = await database.fetch_one("SELECT * FROM entity WHERE id = :id", values={"id": last_record_id})
+    return result
